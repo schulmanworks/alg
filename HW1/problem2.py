@@ -23,13 +23,13 @@ if __name__ == "__main__":
     numShouldFind = 0
     numFound = 0
     times = []
-    r = range(0, 10000000, 50000)
+    r = range(50000, 100000000, 5000000)
     for x in r:
         arr = genArray(x)
         avg = 0
         runs = 100
         for v in range(runs):
-            num = np.random.randint(low=0, high=100e3)
+            num = np.random.randint(low=0, high=x)
             start_time = timeit.default_timer()
             found = binarySearch(arr, 0, x, num) is not None
             if found:
