@@ -57,7 +57,11 @@ if __name__ == "__main__":
     getPath(G, n, good_path)
     print "good_path", good_path
     print pprint.pformat(dict(G.adj))
-    plt.plot(nx.draw_shell(G, with_labels=True))
+    pos = nx.spectral_layout(G, scale=2)
+    nx.draw(G, pos, with_labels=True)
+    edge_labels = nx.get_edge_attributes(G, 'r')
+    # plt.plot(nx.draw_shell(G, with_labels=True))
+    nx.draw_networkx_edge_labels(G, pos, labels=edge_labels)
     plt.title("Good path"+str(good_path))
     plt.show()
     # pdb.set_trace()
