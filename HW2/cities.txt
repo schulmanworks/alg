@@ -1,0 +1,10 @@
+{0: AtlasView({1: {'weight': 8}, 2: {'weight': 7}, 3: {'weight': 1}, 4: {'weight': 2}, 5: {'weight': 2}, 6: {'weight': 6}, 7: {'weight': 5}, 8: {'weight': 8}, 9: {'weight': 10}}),
+ 1: AtlasView({0: {'weight': 8}, 2: {'weight': 10}, 3: {'weight': 4}, 4: {'weight': 4}, 5: {'weight': 9}, 6: {'weight': 7}, 7: {'weight': 5}, 8: {'weight': 8}, 9: {'weight': 2}}),
+ 2: AtlasView({0: {'weight': 7}, 1: {'weight': 10}, 3: {'weight': 9}, 4: {'weight': 4}, 5: {'weight': 3}, 6: {'weight': 5}, 7: {'weight': 2}, 8: {'weight': 4}, 9: {'weight': 8}}),
+ 3: AtlasView({0: {'weight': 1}, 1: {'weight': 4}, 2: {'weight': 9}, 4: {'weight': 7}, 5: {'weight': 5}, 6: {'weight': 2}, 7: {'weight': 1}, 8: {'weight': 1}, 9: {'weight': 1}}),
+ 4: AtlasView({0: {'weight': 2}, 1: {'weight': 4}, 2: {'weight': 4}, 3: {'weight': 7}, 5: {'weight': 1}, 6: {'weight': 2}, 7: {'weight': 3}, 8: {'weight': 4}, 9: {'weight': 9}}),
+ 5: AtlasView({0: {'weight': 2}, 1: {'weight': 9}, 2: {'weight': 3}, 3: {'weight': 5}, 4: {'weight': 1}, 6: {'weight': 8}, 7: {'weight': 7}, 8: {'weight': 9}, 9: {'weight': 2}}),
+ 6: AtlasView({0: {'weight': 6}, 1: {'weight': 7}, 2: {'weight': 5}, 3: {'weight': 2}, 4: {'weight': 2}, 5: {'weight': 8}, 7: {'weight': 8}, 8: {'weight': 5}, 9: {'weight': 8}}),
+ 7: AtlasView({0: {'weight': 5}, 1: {'weight': 5}, 2: {'weight': 2}, 3: {'weight': 1}, 4: {'weight': 3}, 5: {'weight': 7}, 6: {'weight': 8}, 8: {'weight': 2}, 9: {'weight': 6}}),
+ 8: AtlasView({0: {'weight': 8}, 1: {'weight': 8}, 2: {'weight': 4}, 3: {'weight': 1}, 4: {'weight': 4}, 5: {'weight': 9}, 6: {'weight': 5}, 7: {'weight': 2}, 9: {'weight': 6}}),
+ 9: AtlasView({0: {'weight': 10}, 1: {'weight': 2}, 2: {'weight': 8}, 3: {'weight': 1}, 4: {'weight': 9}, 5: {'weight': 2}, 6: {'weight': 8}, 7: {'weight': 6}, 8: {'weight': 6}})}

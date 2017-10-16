@@ -1,0 +1,29 @@
+minimum <- 99999999
+
+getPath(G, n, good_path, curPath <- [], curNode<-None):
+    if curNode is None DO
+        for node in G.nodes:
+            getPath(G, n, good_path, curPath <- [], curNode<-node)
+          END
+    else:
+        if curNode not in curPath DO
+            curPath.append(curNode)
+        else:
+            return
+        END
+        for edge in G.edges(curNode) DO
+            node <- edge[1]
+            if lengeth(curPath) == n DO
+                tmp <- path_len(curPath, G)
+                if tmp < minimum DO
+                    minimum <- tmp
+                    good_path.append(curPath)
+                    while len(good_path) > 1 DO
+                        good_path.pop(0)
+                    END
+                END
+            else:
+                getPath(G, n, good_path, curPath<-list(curPath), curNode<-node)
+            END
+          END
+        END

@@ -56,8 +56,11 @@ if __name__ == "__main__":
                     G.add_edge(x,y,weight=random.randint(1,10))
     getPath(G, n, good_path)
     print "good_path", good_path
-    print pprint.pformat(dict(G.adj))
-    pos = nx.spectral_layout(G, scale=2)
+    form =  pprint.pformat(dict(G.adj))
+    f = open('cities.txt', 'w')
+    print form
+    f.write(form)
+    pos = nx.shell_layout(G, scale=10)
     nx.draw(G, pos, with_labels=True)
     edge_labels = nx.get_edge_attributes(G, 'r')
     # plt.plot(nx.draw_shell(G, with_labels=True))
