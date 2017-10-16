@@ -6,11 +6,11 @@ import  matplotlib.pyplot as plt
 import pdb
 import networkx as nx
 import random
+import pprint
 
 minimum=99999999
 
 def path_len(path, G):
-    print path
     # pdb.set_trace()
     result = 0
     length = len(path)
@@ -47,11 +47,17 @@ def getPath(G, n, good_path, curPath = [], curNode=None):
 if __name__ == "__main__":
     good_path = []
     G = nx.Graph()
-    n = 4
+    labels = {}
+    n = 10
+    numEdges = (n**2)/2.0 - 1
     for x in range(n):
         for y in range(n):
             if y != x:
                     G.add_edge(x,y,weight=random.randint(1,10))
     getPath(G, n, good_path)
     print "good_path", good_path
+    print pprint.pformat(dict(G.adj))
+    plt.plot(nx.draw_shell(G, with_labels=True))
+    plt.title("Good path"+str(good_path))
+    plt.show()
     # pdb.set_trace()
