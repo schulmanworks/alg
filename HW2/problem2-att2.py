@@ -48,7 +48,9 @@ if __name__ == "__main__":
     good_path = []
     G = nx.Graph()
     labels = {}
-    n = 10
+    n = 2
+    time_arr = []
+    for z in range(10):
     numEdges = (n**2)/2.0 - 1
     for x in range(n):
         for y in range(n):

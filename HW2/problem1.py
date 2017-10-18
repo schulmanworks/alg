@@ -50,18 +50,19 @@ def getMagicSquares(n, good_arrs, cur_val=0, cur_arr=[]):
         # print "range", range(cur_val + 1, n, 1)
         rr = range(1, n*n + 1, 1)
         # print rr
-        for x in rr:
-            if len(cur_arr) == n*n:
-                # print "found right length"
-                if check(cur_arr, n):
-                    print "passed check"
-                    good_arrs.append(cur_arr)
-            else:
+        if len(cur_arr) == n*n:
+            # print "found right length"
+            if check(cur_arr, n):
+                print "passed check"
+                print cur_arr
+                good_arrs.append(cur_arr)
+        else:
+            for x  in rr:
                 getMagicSquares(n, good_arrs, x, list(cur_arr))
 
 if __name__ == "__main__":
     good_arrs = []
-    n = 3
+    n = 4
         # pdb.set_trace()
     getMagicSquares(n, good_arrs, cur_arr=[])
     print good_arrs
