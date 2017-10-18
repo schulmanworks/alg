@@ -49,12 +49,25 @@ if __name__ == "__main__":
     G = nx.Graph()
     labels = {}
     n = 2
+    timeArr = []
     numEdges = (n**2)/2.0 - 1
-    for x in range(n):
-        for y in range(n):
-            if y != x:
-                    G.add_edge(x,y,weight=random.randint(1,10))
-    getPath(G, n, good_path)
+    for n in range(10):
+        avg = 0
+        for __ in range(1):
+            for x in range(n):
+                for y in range(n):
+                    if y != x:
+                        G.add_edge(x,y,weight=random.randint(1,10))
+            start_time = timeit.default_timer()
+            getPath(G, n, good_path)
+            elapsed = timeit.default_timer() - start_time
+            avg += elapsed
+        print "elapsed:", (avg/100.0)
+        timeArr.append(avg/100.0)
+    plt.plot(np.arange(len(timeArr)), timeArr)
+    plt.show()
+
+
     print "good_path", good_path
     form =  pprint.pformat(dict(G.adj))
     f = open('cities.txt', 'w')
