@@ -15,16 +15,19 @@ def getKthElement(k , arr):
         if arr[i] > localMax:
             localMax = arr[i]
             localMaxIndex = i
-    for i in range(k, len(arr)):
-        if arr[i] < localMax:
-            arr[localMaxIndex] = arr[i]
-            del arr[i]
-            return getKthElement(k, arr)
+    tmp_arr = arr[k:]
+    while len(tmp_arr) > 0:
+        if tmp_arr[0] < localMax:
+            arr[localMaxIndex] = tmp_arr[0]
+            del tmp_arr[0]
+            return getKthElement(k, arr[:k]+tmp_arr)
+        else:
+            del tmp_arr[0]
     return localMax
 
 if __name__ == "__main__":
     arr = [random.randint(0,100) for _ in range(10)]
-    k = 6
+    k = 3
     print arr
     print sorted(arr)
     element = getKthElement(k, arr)
