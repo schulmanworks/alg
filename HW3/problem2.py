@@ -12,6 +12,7 @@ inversions = 0
 def sort(arr):
     global inversions
     if arr[0] > arr[1]:
+        inversions += 1
         return [arr[1], arr[0]]
     else:
         return arr
@@ -49,8 +50,8 @@ def mergeSort(arr):
 
 if __name__ == "__main__":
     x = 10
-    arr = [2, 4, 1, 3, 5]#
-    # arr = [random.randint(0,100) for _ in range(x)]
+    # arr = [2, 4, 1, 3, 5]#
+    arr = [random.randint(0,100) for _ in range(x)]
     # print arr
     res = mergeSort(arr)
     print "$$$$$$$$$$$$$$"

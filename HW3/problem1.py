@@ -54,6 +54,7 @@ if __name__ == "__main__":
         avg = 0
         r = 100
         for __ in range(r):
+            k = random.randint(0,x-1)
             arr = [random.randint(0,100) for _ in range(x)]
             start_time = timeit.default_timer()
             quickSort(arr, 0, len(arr) - 1)
